@@ -1,0 +1,39 @@
+.carousel_container
+	@extend %relative
+	height: 460px
+	margin-bottom: 40px
+.carousel_thumb
+	+position( absolute, $b: 0, $l: 50% )
+	transform: translateX( -50% )
+	margin-top: 30px
+	z-index: 10;
+	li
+		@extend %inline_block
+		margin: 0 5px
+		&.active
+			outline: 2px solid red
+		&.none
+			@extend %none
+
+.carousel_img, .carousel_thumb, .carousel_btn
+	@extend %txt-align_center
+
+.carousel_btn
+	@extend %width_100
+	+position( absolute, $b: 0, $l: 50% )
+	transform: translateX( -50% )
+	width: 380px
+	height: 69px
+	z-index: 9
+	button
+		@extend %ir
+		width: 64px
+		height: 69px
+		&.btn_left
+			+position( absolute, $l: 0 )
+			background-image: url("../images/carousel_btn_left.gif")
+		&.btn_right
+			+position( absolute, $r: 0 )
+			background-image: url("../images/carousel_btn_right.gif")
+		&.none
+			@extend %none

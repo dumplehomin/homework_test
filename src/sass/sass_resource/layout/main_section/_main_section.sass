@@ -1,0 +1,54 @@
+@import title_01
+@import title_02
+@import title_03
+@import title_04
+
+.main_section
+	@extend %relative
+	margin-bottom: 20px
+	&
+		*zoom: expression(this.runtimeStyle['zoom'] = '1',this.insertBefore(document.createElement("i"),this.firstChild).className="ie-after")
+	&.ie-after
+		@extend %ie7_clearfix
+
+	&::after
+		@extend %clearfix
+	&
+		.title_01, .title_02
+			height: 370px
+		.title_03, .title_04             
+			height: 340px
+		.title_01, .title_03
+			@extend %float_left
+		.title_02, .title_04
+			@extend %float_right
+	&.align_reverse
+		.title_01, .title_03
+			@extend %float_right
+		.title_02, .title_04
+			@extend %float_left
+		.title_01, .title_02
+			margin-top: 370px
+		.title_03, .title_04
+			margin-top: -740px
+	article
+		@extend %relative
+	h2
+		@extend %font-wei_800
+		@extend %main_section_title_boder
+		color: $main_section_title_color
+		font-size: $main_section_title_font_size
+		line-height: $main_section_title_line-height
+		margin-bottom: 20px
+	.layout_change
+		+position( absolute, $t: -29px, $r: 0 )
+		background-color: #91cefb
+		padding: 7px 25px
+		font-size: 12px
+		font-size: 1.2rem
+
+.article_type_01
+	width: $main_section_article_width_type_01
+
+.article_type_02
+	width: $main_section_article_width_type_02

@@ -1,0 +1,33 @@
+%main_section_title_boder
+	border-bottom: 1px solid #ccc
+	
+%ie7_clearfix
+	@extend %block
+	@extend %width_100
+	clear: bot
+
+%offscreen
+	@extend %absolute
+	@extend %over_hidden
+	width: 1px
+	height: 1px
+	word-break: initial
+	word-wrap: initial
+
+%txt_over_hidden
+	@extend %over_hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+	word-wrap: normal
+
+%link_hover_text
+	@extend %txt-decoration_underline
+	color: $link_over_color !important
+
+%tab_menu_border_line
+	@extend %content_empty
+	+position( absolute, $t: 50%, $r: -1px )
+	transform: translateY(-50%)
+	width: 1px
+	height: 23px
+	background-color: #8bcaf4

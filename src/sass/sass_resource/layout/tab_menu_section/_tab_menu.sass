@@ -1,0 +1,60 @@
+.tab_menu
+	margin-bottom: 20px
+.tab_btn
+	@extend %relative
+	z-index: 1
+	ul
+		@extend %inline_block
+		border-left: 3px solid $tab_menu_bg_color
+		border-right: 3px solid $tab_menu_bg_color
+		&
+			*zoom: expression(this.runtimeStyle['zoom'] = '1',this.insertBefore(document.createElement("i"),this.firstChild).className="ie-after")
+		&.ie-after
+			@extend %ie7_clearfix
+		&::after
+			@extend %clearfix
+		li
+			@extend %float_left
+			@extend %color_fff
+			background-color: $tab_menu_bg_color
+			font-size: 12px
+			font-size: 1.2rem
+			line-height: 1
+			background: url(../images/tab_menu_bg.gif)
+			background-repeat: repeat
+			background: linear-gradient(top, #40a7ed, #3497ea)
+			&:last-child
+				button
+					&::after
+						@extend %none
+			&.active, &.active:hover
+				button
+					@extend %bg-color_fff
+					color: #0085da
+			&:hover
+				button
+					background-color: $tab_menu_bg_hover_color
+				button::after
+					display: none
+
+			button
+				@extend %relative
+				@extend %color_fff
+				margin-top: 3px
+
+				padding: 12px 40px
+					
+				&::after
+					@extend %tab_menu_border_line
+
+
+
+
+
+
+
+
+
+
+
+

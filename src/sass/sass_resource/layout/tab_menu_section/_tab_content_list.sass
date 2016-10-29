@@ -1,0 +1,16 @@
+.tab_content_list
+	ul
+		&
+			*zoom: expression(this.runtimeStyle['zoom'] = '1',this.insertBefore(document.createElement("i"),this.firstChild).className="ie-after")
+		&.ie-after
+			@extend %ie7_clearfix
+		&::after
+			@extend %clearfix
+
+		li
+			@extend %float_left
+			+margin( right bottom, 12px )
+			&.list_06
+				@extend %float_right
+				margin: 0
+				margin-top: -162px

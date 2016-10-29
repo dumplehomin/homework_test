@@ -1,0 +1,88 @@
+.title_01
+	ul
+		&
+			*zoom: expression(this.runtimeStyle['zoom'] = '1',this.insertBefore(document.createElement("i"),this.firstChild).className="ie-after")
+		&.ie-after
+			@extend %ie7_clearfix
+		&::after
+			@extend %clearfix
+		li
+			@extend %float_left
+			@extend %relative
+			margin-right: 10px
+			width: 117px
+			height: 115px
+			font-size: 14px
+			font-size: 1.4rem
+
+			a
+				@extend %height_100
+				z-index: 10
+				&:hover
+					.product_content>strong, .product_exp
+						@extend %link_hover_text
+
+			.product_content
+				@extend %inline_block
+				@extend %width_100
+				@extend %txt-align_left
+				font-size: 12px
+				font-size: 1.2rem
+				color: #333
+				>strong
+					@extend %block
+					@extend %width_100
+					@extend %txt_over_hidden
+					@extend %font-wei_100
+					line-height: 2.3333
+
+				.product_exp
+					@extend %offscreen
+				.price
+					strong
+						@extend %font-wei_100
+						color: #099be8
+
+			&.title_01_last_product, &:first-child
+				margin-right: 0
+			&.title_01_last_product
+				@extend %float_right
+			&:first-child
+				@extend %width_100
+				height: 160px
+				margin-bottom: 12px
+				background-color: #f9f9f9
+				&
+					a
+						padding: 20px
+
+				img
+					margin-right: 15px
+
+				.product_content
+					width: 270px
+
+					>strong
+						@extend %block
+						@extend %font-wei_800
+						margin-bottom: 10px
+						line-height: 1.2
+						font-size: 14px
+						font-size: 1.4rem
+					.product_exp
+						@extend %relative
+						@extend %block
+						@extend %width_100
+						@extend %height_auto
+						font-size: 12px
+						font-size: 1.2rem
+						line-height: 1.5
+						margin-bottom: 20px
+					.price
+						strong
+							@extend %font-wei_400
+							font-size: 32px
+							font-size: 3.2rem
+						span
+							@extend %font-wei_800
+							margin-left: 5px

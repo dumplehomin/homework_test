@@ -1,0 +1,49 @@
+.join_section
+	h2
+		@extend %font-wei_400
+		@extend %main_section_title_boder
+		color: $main_section_title_color
+		font-size: 18px
+		font-size: 1.8rem
+		line-height: 1.66667
+		margin-bottom: 25px
+
+.join_content
+	@extend %txt-align_left
+	@extend %margin_0_auto
+	font-size: 14px
+	font-size: 1.4rem
+	border-top: 1px solid #ccc
+	color: #000
+	th, td
+		line-height: 1.4286
+		padding: 5px 10px
+		border-bottom: 1px solid #ccc
+	th, th:first-child + td
+		border-right: 1px solid #ccc
+	input, select
+		border: 1px solid #000
+	label[for^="sAgree"], label[for="M"], label[for="F"]
+		font-size: 12px
+		margin-left: 10px
+		input
+			margin-right: 5px
+	select
+		border-radius: 0
+		padding: 0 15px
+	#userPhone2, #userPhone3
+		@extend %txt-align_center
+		width: 70px
+#submit
+	@extend %block
+	@extend %txt-align_center
+	@extend %margin_0_auto
+	@extend %color_000
+	@extend %font-wei_600
+	width: 100px
+	font-size: 15px
+	font-size: 1.5rem
+	line-height: 2.6666
+	margin-top: 25px 
+	background-color: #8eb4e3
+	border: 1px solid #000

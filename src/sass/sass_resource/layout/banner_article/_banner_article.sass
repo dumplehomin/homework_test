@@ -1,0 +1,39 @@
+.banner_container
+	@extend %txt-align_center
+	margin-bottom: 40px
+
+.banner
+	@extend %relative
+	@extend %margin_0_auto
+	width: 312px
+	height: 178px
+	margin-bottom: 15px
+
+	&:first-child
+		height: 150px
+	&:hover
+		.banner_link
+			@extend %block
+
+.banner_link
+	@extend %none
+	@extend %width-height_100
+	@extend %bg_repeat
+	+position( absolute, $l: 0, $t: 0 )
+	background-image: url("../images/banner_hover_bg.png")
+	font-size: 13px
+	font-size: 1.3rem
+	a
+		+position( absolute, $l: 50%, $t: 50% )
+		transform: translate( -50%, 50% )
+		width: 120px
+		height: 30px
+		line-height: 2.3
+		background-color: #587384
+		color: #1e190d
+
+		&:first-child
+			transform: translate( -50%, -100% )
+		&:hover
+			@extend %color_fff
+			background-color: #6a94ae

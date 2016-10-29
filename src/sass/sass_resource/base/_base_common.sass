@@ -1,0 +1,29 @@
+html, body
+	@extend %height_100
+	@extend %color_000
+body
+	color: $body_color
+body *
+	outline: none
+
+ul, ol
+	@extend %list-style_none
+
+a
+	@extend %txt-decoration_non
+	@extend %block
+	@extend %width_100
+	@extend %cursor_pointer
+a:link, a:visited
+	color: $body_color
+a:hover
+	outline: 1px solid red
+img
+	vertical-align: top
+button
+	@extend %cursor_pointer
+table
+	border-collapse: collapse
+	border-spacing: 0
+	th
+		@extend %font-wei_100

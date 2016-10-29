@@ -1,0 +1,13 @@
+.title_03
+	li
+		@extend %float_left
+		+margin( right bottom, 12px )
+		&:nth-child(3n + 3)
+			margin-right: 0
+
+html.ie7.ie8
+	.title_03
+		li:first-child
+			& + li + li, & + li + li + li + li + li, & + li + li + li + li + li + li + li + li
+				margin-right: 0
+				

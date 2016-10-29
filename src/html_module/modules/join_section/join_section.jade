@@ -1,0 +1,65 @@
+section.join_section
+	article
+		h2 회원정보 입력
+		table.join_content
+			colgroup
+				col(width="10%")
+				col(width="25%")
+				col(width="15%")
+				col(width="50%")
+			tbody
+				tr
+					th 
+						label(for="userId") 아이디
+					td
+						input(type="text" id="userId" placeholder="영문")
+					th
+						label(for="userEmail1") 이메일
+					td
+						input(type="email" id="userEmail1") 
+						| &nbsp;@
+						input(type="email" id="userEmail2")
+				tr
+					th 
+						label(for="userPw") 비밀번호
+					td
+						input(type="password" id="userPw")
+					th 
+						label(for="userPwCheck") 비밀번호 확인
+					td
+						input(type="password" id="userPwCheck")
+				tr
+					th 
+						label(for="userName") 이름
+					td
+						input(type="text" id="userName" placeholder="한글")
+					th 휴대폰번호
+					td
+						select(id="userPhone1")
+							<option value="0">선택</option>
+							<option value="010">010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
+						| &nbsp;-
+						input(type="tel" id="userPhone2" maxlength="4")
+						| &nbsp;-
+						input(type="tel" id="userPhone3" maxlength="4")
+				tr
+					th 성별
+					td
+						label(for="M") 남자
+							input(type="radio" name="gender" id="M" value="M")
+						label(for="F") 여자
+							input(type="radio" name="gender" id="F" value="F")
+					th 약관동의
+					td
+						label(for="sAgree1")
+							input(type="checkbox" id="sAgree1")
+							| 이용약관에 동의합니다.
+						label(for="sAgree2")
+							input(type="checkbox" id="sAgree2")
+							| 개인정보 취급방침에 동의합니다.
+		div.bt_area
+			button(id="submit" type="button") 가입완료
