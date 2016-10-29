@@ -1,0 +1,89 @@
+
+<section class="join_section">
+  <article>
+    <h2>회원정보 입력</h2>
+    <table class="join_content">
+      <colgroup>
+        <col width="10%"/>
+        <col width="25%"/>
+        <col width="15%"/>
+        <col width="50%"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th> 
+            <label for="userId">아이디</label>
+          </th>
+          <td>
+            <input type="text" id="userId" placeholder="영문"/>
+          </td>
+          <th>
+            <label for="userEmail1">이메일</label>
+          </th>
+          <td>
+            <input type="email" id="userEmail1"/>&nbsp;@
+            <input type="email" id="userEmail2"/>
+          </td>
+        </tr>
+        <tr>
+          <th> 
+            <label for="userPw">비밀번호</label>
+          </th>
+          <td>
+            <input type="password" id="userPw"/>
+          </td>
+          <th> 
+            <label for="userPwCheck">비밀번호 확인</label>
+          </th>
+          <td>
+            <input type="password" id="userPwCheck"/>
+          </td>
+        </tr>
+        <tr>
+          <th> 
+            <label for="userName">이름</label>
+          </th>
+          <td>
+            <input type="text" id="userName" placeholder="한글"/>
+          </td>
+          <th>휴대폰번호</th>
+          <td>
+            <select id="userPhone1">
+              <option value="0">선택</option>
+              <option value="010">010</option>
+              <option value="011">011</option>
+              <option value="016">016</option>
+              <option value="018">018</option>
+              <option value="019">019</option>
+            </select>&nbsp;-
+            <input type="tel" id="userPhone2" maxlength="4"/>&nbsp;-
+            <input type="tel" id="userPhone3" maxlength="4"/>
+          </td>
+        </tr>
+        <tr>
+          <th>성별</th>
+          <td>
+            <label for="M">남자
+              <input type="radio" name="gender" id="M" value="M"/>
+            </label>
+            <label for="F">여자
+              <input type="radio" name="gender" id="F" value="F"/>
+            </label>
+          </td>
+          <th>약관동의</th>
+          <td>
+            <label for="sAgree1">
+              <input type="checkbox" id="sAgree1"/>이용약관에 동의합니다.
+            </label>
+            <label for="sAgree2">
+              <input type="checkbox" id="sAgree2"/>개인정보 취급방침에 동의합니다.
+            </label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="bt_area">
+      <button id="submit" type="button">가입완료</button>
+    </div>
+  </article>
+</section>
